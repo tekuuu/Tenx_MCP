@@ -27,6 +27,12 @@ Upon approval, the agent implemented the `README.md` and immediately ran termina
 The resulting `README.md` (viewable in the root directory) acts as a baseline for project standards and directs future agents to the global instruction set.
 ![Final README Preview](./response3.png)
 
+
+### D. Functional Task Execution & Verification
+To test the agent's ability to perform autonomous technical tasks, I requested the creation of a functional test suite. The agent successfully created a `tests/` directory and a Python verification script.
+![Functional Verification](./response4.png)
+*Note: The screenshot shows the agent executing the script in the terminal and confirming the output "MCP Orchestration Active," completing the full Plan-Execute-Verify cycle for a technical deliverable.*
+
 ## 4. Technical Challenges & Troubleshooting
 - **Configuration Hurdles:** Initial `mcp.json` structures failed to trigger the server due to missing headers. I resolved this by correctly nesting the server configuration and adding the mandatory `inputs: []` array as specified in the Tenx technical requirements.
 - **Context Management:** To prevent "context saturation" (where the AI loses track of the goal), I implemented rules for atomic context distribution, mirroring the "fleet" model used by elite engineering teams.
